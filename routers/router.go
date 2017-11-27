@@ -7,13 +7,13 @@ import (
 
 	"github.com/astaxie/beego"
 	"github.com/astaxie/beego/context"
-	"github.com/deepzz0/goblog/RS"
-	"github.com/deepzz0/goblog/controllers"
-	"github.com/deepzz0/goblog/controllers/background"
-	"github.com/deepzz0/goblog/controllers/feed"
-	"github.com/deepzz0/goblog/controllers/plugin"
-	"github.com/deepzz0/goblog/controllers/proxy"
-	"github.com/deepzz0/goblog/helper"
+	"github.com/magicsea/goblog/RS"
+	"github.com/magicsea/goblog/controllers"
+	"github.com/magicsea/goblog/controllers/background"
+	"github.com/magicsea/goblog/controllers/feed"
+	"github.com/magicsea/goblog/controllers/plugin"
+	"github.com/magicsea/goblog/controllers/proxy"
+	"github.com/magicsea/goblog/helper"
 )
 
 const (

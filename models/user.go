@@ -6,9 +6,9 @@ import (
 	"time"
 
 	db "github.com/deepzz0/go-com/mongo"
-	"github.com/deepzz0/goblog/RS"
-	"github.com/deepzz0/goblog/helper"
 	"github.com/deepzz0/logd"
+	"github.com/magicsea/goblog/RS"
+	"github.com/magicsea/goblog/helper"
 	"gopkg.in/mgo.v2/bson"
 )
 

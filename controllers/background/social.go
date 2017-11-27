@@ -5,9 +5,9 @@ import (
 	"sort"
 	"time"
 
-	"github.com/deepzz0/goblog/RS"
-	"github.com/deepzz0/goblog/helper"
-	"github.com/deepzz0/goblog/models"
+	"github.com/magicsea/goblog/RS"
+	"github.com/magicsea/goblog/helper"
+	"github.com/magicsea/goblog/models"
 	"github.com/deepzz0/logd"
 )
 

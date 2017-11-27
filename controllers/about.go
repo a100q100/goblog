@@ -3,7 +3,7 @@ package controllers
 import (
 	"fmt"
 
-	"github.com/deepzz0/goblog/models"
+	"github.com/magicsea/goblog/models"
 )
 
 type AboutController struct {

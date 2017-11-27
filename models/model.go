@@ -2,14 +2,15 @@ package models
 
 import (
 	"encoding/json"
+	"fmt"
 	"io/ioutil"
 	"os"
 	"time"
 
 	"github.com/deepzz0/go-com/monitor"
-	"github.com/deepzz0/goblog/RS"
-	"github.com/deepzz0/goblog/helper"
 	"github.com/deepzz0/logd"
+	"github.com/magicsea/goblog/RS"
+	"github.com/magicsea/goblog/helper"
 	"github.com/wangtuanjie/ip17mon"
 )
 
@@ -39,6 +40,7 @@ var TMgr = NewTM()
 var path, _ = os.Getwd()
 var Blogger *User
 var Icons = make(map[string]*Icon, 500)
+var Author = "magicsea"
 
 func init() {
 	if err := ip17mon.Init(path + "/conf/17monipdb.dat"); err != nil {
@@ -46,7 +48,8 @@ func init() {
 	}
 	//
 	UMgr.loadUsers()
-	Blogger = UMgr.Get("deepzz")
+	Blogger = UMgr.Get(Author)
+	fmt.Printf("find author:%+v", Blogger)
 	// not found account
 	if Blogger == nil {
 		initAccount()
@@ -76,7 +79,7 @@ func initAccount() {
 	if code != RS.RS_success {
 		panic("init failed。")
 	}
-	Blogger = UMgr.Get("deepzz")
+	Blogger = UMgr.Get(Author)
 }
 
 func timer() {

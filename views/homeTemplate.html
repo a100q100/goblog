@@ -43,12 +43,14 @@
       </ul>
     </nav>
   </div>
+
   <div class="col-md-3 col-xs-2" id="home-right">
     <!-- <h3 class="tq">最新评论</h3> -->
     <!-- 多说最新评论 start -->
     <!-- <div class="ds-recent-comments" data-num-items="5" data-show-avatars="1" data-show-time="1" data-show-title="1" data-show-admin="1" data-excerpt-length="70"></div> -->
     <!-- 多说最新评论 end -->
     <!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+	<!--
     <script type="text/javascript">
     var duoshuoQuery = {short_name:"deepzz"};
       (function() {
@@ -59,10 +61,11 @@
         (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(ds);
       })();
     </script>
+	-->
     <!-- 多说公共JS代码 end -->
+	<!--
     <h3 class="tq">云标签</h3>
     <div class="tagcloud">
-    <!-- <a href="http://hessian.cn/tag/4741" class="tag-link-10">4741</a> -->
       {{range .Tags}}
         {{if lt .Count 23}}
           <a class="tag-link-{{.Count}}" href="{{.Extra}}" target="_self" title="{{.Count}} topic">{{.Text}}</a>
@@ -79,10 +82,10 @@
     </ul>
     <h3 class="tq">友情连接</h3>
     <ul class="blogroll">
-      <!-- <li><a href="http://songda.me" title="好哥们宋达的博客" target="_blank">SongDa's Blog</a></li> -->
       {{range .Blogrolls}}
         <li><a href="{{.Extra}}" target="_blank" title="{{.Title}}">{{.Text}}</a></li>
       {{end}}
     </ul>
+	-->
   </div>
 </div>

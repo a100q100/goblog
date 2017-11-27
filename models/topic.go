@@ -9,9 +9,9 @@ import (
 	"time"
 
 	db "github.com/deepzz0/go-com/mongo"
-	"github.com/deepzz0/goblog/RS"
-	"github.com/deepzz0/goblog/helper"
 	"github.com/deepzz0/logd"
+	"github.com/magicsea/goblog/RS"
+	"github.com/magicsea/goblog/helper"
 	"github.com/russross/blackfriday"
 	"gopkg.in/mgo.v2/bson"
 )
@@ -73,7 +73,8 @@ func NewTM() *TopicMgr {
 
 func (m *TopicMgr) loadTopics() {
 	var topics []*Topic
-	err := db.FindAll(DB, C_TOPIC, bson.M{"author": Blogger.UserName}, &topics)
+	name := Blogger.UserName
+	err := db.FindAll(DB, C_TOPIC, bson.M{"author": name}, &topics)
 	if err != nil {
 		panic(err)
 	}

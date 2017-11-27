@@ -2,14 +2,14 @@ package background
 
 import (
 	"io/ioutil"
+	"log"
 	"os"
 	"strings"
+	//log "qiniupkg.com/x/log.v7"
 
-	log "qiniupkg.com/x/log.v7"
-
-	"github.com/deepzz0/goblog/RS"
-	"github.com/deepzz0/goblog/helper"
-	"github.com/deepzz0/goblog/models"
+	"github.com/magicsea/goblog/RS"
+	"github.com/magicsea/goblog/helper"
+	"github.com/magicsea/goblog/models"
 )
 
 type SysconfigController struct {
@@ -31,7 +31,7 @@ func (this *SysconfigController) Post() {
 	resp := helper.NewResponse()
 	defer resp.WriteJson(this.Ctx.ResponseWriter)
 	flag := this.GetString("flag")
-	log.Debugf("flag = %s", flag)
+	log.Printf("flag = %s", flag)
 	switch flag {
 	case "deleteverify":
 		this.deleteVerify(resp)
@@ -86,14 +86,14 @@ func (this *SysconfigController) updateSitemap(resp *helper.Response) {
 	}
 	_, err := os.Stat(models.SiteFile)
 	if err != nil && !strings.Contains(err.Error(), "no such file") {
-		log.Error(err)
+		log.Printf(err.Error())
 		return
 	} else {
 		os.Remove(models.SiteFile)
 	}
 	f, err := os.Create(models.SiteFile)
 	if err != nil {
-		log.Error(err)
+		log.Printf(err.Error())
 		return
 	}
 	defer f.Close()

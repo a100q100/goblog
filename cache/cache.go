@@ -5,8 +5,8 @@ import (
 	"io/ioutil"
 	"os"
 
-	"github.com/deepzz0/goblog/models"
 	"github.com/deepzz0/logd"
+	"github.com/magicsea/goblog/models"
 )
 
 type cache struct {

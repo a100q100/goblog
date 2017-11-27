@@ -9,9 +9,9 @@ import (
 	"time"
 
 	"github.com/astaxie/beego/context"
-	"github.com/deepzz0/goblog/controllers"
-	"github.com/deepzz0/goblog/helper"
-	"github.com/deepzz0/goblog/models"
+	"github.com/magicsea/goblog/controllers"
+	"github.com/magicsea/goblog/helper"
+	"github.com/magicsea/goblog/models"
 	"github.com/deepzz0/logd"
 )
 
